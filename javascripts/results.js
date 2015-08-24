@@ -20,6 +20,8 @@ define(function(require) {
         player1Card = 10;
       }
 
+      player1Card = Number(player1Card);
+
 
       if (player2Card === "ACE") {
         player2Card = 14;
@@ -33,8 +35,10 @@ define(function(require) {
         player2Card = 10;
       }
 
-      console.log("player1Card", player1Card);
-      console.log("player2Card", player2Card);
+      player2Card = Number(player2Card);
+
+      console.log("player1Card", typeof player1Card);
+      console.log("player2Card", typeof player2Card);
 
       if (player1Card > player2Card) {
         $("#result").text("Player 1 wins this turn!");

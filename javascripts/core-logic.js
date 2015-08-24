@@ -4,6 +4,7 @@ define(function(require) {
     var newGame = require("newGame");
     var play = require("play");
     var results = require("results");
+    var display = require("display-data");
 
     var deckID;
     var player1Score = 0;
@@ -35,13 +36,11 @@ define(function(require) {
 
       play.play(deckID).then(function(data){
         console.log("play data", data);
-        $("#player1CardImg").html("<img src='" + data.cards[0].image + "'>");
-        $("#player1Card").text(data.cards[0].value + " of " + data.cards[0].suit);
-        $("#player2CardImg").html("<img src='" + data.cards[1].image + "'>");
-        $("#player2Card").text(data.cards[1].value + " of " + data.cards[1].suit);
-        $("#player1Score").text(player1Score);
-        $("#player2Score").text(player2Score);
-        $("#turns").text((data.remaining)/2);
+        if(data.remaining === 0) {
+          $("#result").text("Game Over!");
+        } 
+        display.display(data);
+        
         var winner = results.results(data);
         if (winner == 1) {
           player1Score += 2;
