@@ -9,7 +9,6 @@ define(function(require) {
     var deckID;
     var player1Score = 0;
     var player2Score = 0;
-    
 
 
     $("#newGame").on("click", function() {
@@ -27,12 +26,13 @@ define(function(require) {
     //     $("#search").click();
     //   }
     // });
-
-
-
     
 
     $("#play").on("click", function() {
+      if (deckID === undefined) {
+        alert("Please select 'new game' before playing");
+      }
+
 
       play.play(deckID).then(function(data){
         console.log("play data", data);
@@ -40,7 +40,7 @@ define(function(require) {
           $("#result").text("Game Over!");
         } 
         display.display(data);
-        
+
         var winner = results.results(data);
         if (winner == 1) {
           player1Score += 2;
