@@ -8,13 +8,31 @@
 </head>
 <body>
   <h1>Play the card game War!</h1>
-  <div class="player player1">
-  </div>
-  <div class="player player2">
-  </div>
-  <div>
-    <input type="button" value="New Game" id="newGame">
-    <input type="button" value="play" id="play">
+  <div class="container">
+    <div class="row">
+      <div class="player player1 col-md-3">
+        <h2>Player 1</h2>
+        <p>Player 1 score: <span id="player1Score"></span></p>
+        <div id="player1CardImg">
+        </div>
+        <div id="player1Card">
+        </div>
+      </div>
+      <div class="controls col-md-3">
+        <input type="button" value="New Game" id="newGame">
+        <input type="button" value="play" id="play">
+        <p id="result"></p>
+        <p>Turns remaining: <span id="turns"></span></p>
+      </div>
+      <div class="player player2 col-md-3">
+        <h2>Player 2</h2>
+        <p>Player 2 score: <span id="player2Score"></span></p>
+        <div id="player2CardImg">
+        </div>
+        <div id="player2Card">
+        </div>
+      </div>
+    </div>
   </div>
 	
 				

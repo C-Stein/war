@@ -1,18 +1,21 @@
 define(function(require) {
+var Q = require("q");
 
   return {
-    play: function(){
-        
+    play: function(deckID){
+      var deferred = Q.defer();
 
-
-      //   $.ajax({
-      //   url:"https://nss-weather.firebaseio.com/weather.json",
-      //   method: "POST",
-      //   data: newForecast
-      // }).done(function(addedForecast){
-      //     console.log("addedForecast", addedForecast);
+      $.ajax({
+        url:"http://deckofcardsapi.com/api/deck/" + deckID + "/draw/?count=2",
+       
+      }).done(function(data){
+          console.log("played", data);
+          deferred.resolve(data);
      
-      // });
+      });
+
+      return deferred.promise;
     }
+
   };
 });
