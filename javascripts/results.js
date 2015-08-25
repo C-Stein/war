@@ -37,9 +37,6 @@ define(function(require) {
 
       player2Card = Number(player2Card);
 
-      console.log("player1Card", typeof player1Card);
-      console.log("player2Card", typeof player2Card);
-
       if (player1Card > player2Card) {
         $("#result").text("Player 1 wins this turn!");
         winner = 1;
@@ -47,7 +44,7 @@ define(function(require) {
         $("#result").text("Player 2 wins this turn!");
         winner = 2;
       } else if (player1Card == player2Card) {
-        $("#result").text("Same card!");
+        // $("#result").text("Same card!");
         winner = 3;
       }
 

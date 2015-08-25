@@ -29,3 +29,26 @@ input[type="button"] {
   font-size: 1.2em;
   font-weight: bold;
 }
+
+#newGame {
+    -webkit-animation: pulsate 1.5s ease-out;
+    -webkit-animation-iteration-count: 3; 
+    opacity: 1.0
+}
+
+@-webkit-keyframes pulsate {
+    0% {opacity: 0.5;}
+    50% {-webkit-transform: scale(1.2, 1.2); opacity: 1.0;}
+    100% {opacity: 0.5;}
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -6,6 +6,7 @@ define(function(require) {
     var results = require("results");
     var display = require("display-data");
     var clear = require("clear-info");
+    var war = require("war");
 
     var deckID;
     var player1Score = 0;
@@ -47,7 +48,21 @@ define(function(require) {
           player1Score += 2;
         } else if (winner == 2) {
           player2Score += 2;
-        } 
+        } else if (winner == 3) {
+            console.log("winner = 3");
+           $("#playWar").toggleClass("hidden");
+            $("#playWar").on("click", function() {
+
+              var warWinner = war.war(deckID);
+              if (warWinner == 1) {
+                player1Score += 8;
+              } else if (warWinner == 2) {
+                player2Score += 8;
+              }
+              $("#playWar").toggleClass("hidden");
+          });  
+        }
+
 
         console.log("player1Score", player1Score);
         console.log("player2Score", player2Score);
