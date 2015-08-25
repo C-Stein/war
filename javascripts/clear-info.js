@@ -11,6 +11,7 @@ define(function(require) {
         $("#player2Score").text("");
         $("#turns").text("");
         $("#result").text("Let's Play!");
+        $(".instructions").hide();
      
     }
 

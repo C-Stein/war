@@ -1,9 +1,12 @@
+$color1: forestGreen;
+$color2: lighten($color1, 10%);
+
 body {
-  background-color: forestGreen;
+  background-color: $color2;
 }
 
 
-h1{
+h1, h3{
   text-align: center;
 }
 
