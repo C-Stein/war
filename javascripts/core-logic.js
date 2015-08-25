@@ -5,6 +5,7 @@ define(function(require) {
     var play = require("play");
     var results = require("results");
     var display = require("display-data");
+    var clear = require("clear-info");
 
     var deckID;
     var player1Score = 0;
@@ -12,7 +13,7 @@ define(function(require) {
 
 
     $("#newGame").on("click", function() {
-    
+        clear.clear();
         newGame.newGame().then(function(data){
           deckID = data.deck_id;
           console.log("deckID", deckID);
