@@ -20,14 +20,14 @@ define(function(require) {
       }).done(function(data){
      console.log("ajax tie done");
 
-    $("#player1CardImg").html("<img src=/images/cardBack.jpg width=84 heighth=113>" + 
-                              "<img src=/images/cardBack.jpg width=84 heighth=113>" +
-                              "<img src=/images/cardBack.jpg width=84 heighth=113>" +
+    $("#player1CardImg").html("<img src=images/cardBack.jpg width=84 heighth=113>" + 
+                              "<img src=images/cardBack.jpg width=84 heighth=113>" +
+                              "<img src=images/cardBack.jpg width=84 heighth=113>" +
                               "<img src='" + data.cards[0].image + "'>");
     $("#player1Card").text("");
-    $("#player2CardImg").html("<img src=/images/cardBack.jpg width=84 heighth=113>" +
-                              "<img src=/images/cardBack.jpg width=84 heighth=113>" +
-                              "<img src=/images/cardBack.jpg width=84 heighth=113>" +
+    $("#player2CardImg").html("<img src=images/cardBack.jpg width=84 heighth=113>" +
+                              "<img src=images/cardBack.jpg width=84 heighth=113>" +
+                              "<img src=images/cardBack.jpg width=84 heighth=113>" +
                               "<img src='" + data.cards[1].image + "'>");
 
     $("#player1Card").text(data.cards[0].value + " of " + data.cards[0].suit);
