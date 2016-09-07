@@ -24,5 +24,7 @@ module.exports = function(grunt) {
   });
 
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+  grunt.loadNpmTasks('grunt-notify');
+  grunt.loadNpmTasks('grunt-newer');
   grunt.registerTask('default', ['jshint', 'sass', 'watch']);
 };
