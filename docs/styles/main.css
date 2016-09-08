@@ -1,0 +1,36 @@
+body {
+  background-color: #2cb42c; }
+
+h1, h3 {
+  text-align: center; }
+
+.player, .controls {
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #eee; }
+
+#player2Card, #player1Card {
+  margin: 5px; }
+
+input[type="button"] {
+  margin: 10px; }
+
+#result {
+  font-size: 1.2em;
+  font-weight: bold; }
+
+#newGame {
+  -webkit-animation: pulsate 1.5s ease-out;
+  -webkit-animation-iteration-count: 3;
+  opacity: 1; }
+
+@-webkit-keyframes pulsate {
+  0% {
+    opacity: 0.5; }
+  50% {
+    -webkit-transform: scale(1.2, 1.2);
+    opacity: 1.0; }
+  100% {
+    opacity: 0.5; } }
+
+/*# sourceMappingURL=main.css.map */
